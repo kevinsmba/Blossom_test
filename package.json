@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "testcafe": "^3.2.0",
+    "testcafe-reporter-allure": "^1.0.5",
+    "uuid": "^9.0.0"
+  },
+  "scripts": {
+    "test": "testcafe chrome googleAutomate.js"
+  }
+}

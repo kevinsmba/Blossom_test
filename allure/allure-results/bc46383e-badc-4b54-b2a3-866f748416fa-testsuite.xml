@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1692666890524' stop='1692666890540'>
+    <name>Google Search</name>
+    <title>Google Search</title>
+    <test-cases>
+        <test-case start='1692666890524' status='failed' stop='1692666903189'>
+            <name>Search a term that has results</name>
+            <title>Search a term that has results</title>
+            <labels>
+                <label name='severity' value='undefined'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='User Agent' value='Chrome 115.0.0.0 / Windows 11'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test has been broken</message>
+                <stack-trace>The specified selector does not match any element in the DOM tree.
+                
+                 > | Selector('#APjFsdvsdvqb')
+                
+                Browser: Chrome 115.0.0.0 / Windows 11
+                
+                    4 |    .page `https://www.google.com`;
+                    5 |
+                    6 |test('Search a term that has results', async t => {
+                    7 |    // Enter the term "Bing" in the search bar
+                    8 |    await t
+                 >  9 |        .typeText(Selector('#APjFsdvsdvqb'), 'Blossom')
+                   10 |        .pressKey('enter');
+                   11 |
+                   12 |    // Check that the results page is displayed
+                   13 |    const results = Selector('#search');
+                   14 |    await t.expect(results.exists).ok();
+                
+                   at &lt;anonymous> (C:\Users\coran\OneDrive\Escritorio\BlossomAutomationTest\googleAutomate.js:9:10)
+                   at asyncGeneratorStep (C:\Users\coran\OneDrive\Escritorio\BlossomAutomationTest\googleAutomate.js:1:37)
+                   at _next (C:\Users\coran\OneDrive\Escritorio\BlossomAutomationTest\googleAutomate.js:1:37)
+                   at &lt;anonymous> (C:\Users\coran\OneDrive\Escritorio\BlossomAutomationTest\googleAutomate.js:1:37)
+                   at &lt;anonymous> (C:\Users\coran\OneDrive\Escritorio\BlossomAutomationTest\googleAutomate.js:1:37)
+                   at &lt;anonymous> (C:\Users\coran\OneDrive\Escritorio\BlossomAutomationTest\googleAutomate.js:19:2)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
